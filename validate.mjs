@@ -40,7 +40,7 @@ const schemas = {
     members: z.object({
         name: z.string(),
         role: z.string(), // ex: Fundador, Community Lead, Membro
-        pillar: z.enum(['conexao', 'conhecimento', 'acessibilidade']).optional(),
+        capability: z.string().optional(), // frente que o lead toca
         isLead: z.boolean().default(false),
         avatar: z.string().optional(), // caminho em /public ou URL
         linkedin: z.string().url().optional(),

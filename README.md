@@ -76,3 +76,25 @@ Bio curta (aparece na sua página de perfil).
 - Datas no formato `AAAA-MM-DD`
 - Nomes de arquivo em minúsculo, com hífens: `meu-post.md`
 - Se a validação falhar no PR, leia o log do check — ele diz o arquivo e o campo exato
+
+## Imagens e arquivos pesados
+
+**Imagens do post** (prints de terminal, diagramas, screenshots): commitam junto
+com o post, na mesma pasta, e referencia com caminho relativo:
+
+\```
+posts/
+└── meu-post/
+    ├── index.md
+    └── diagrama.png   →  no markdown: ![Diagrama](./diagrama.png)
+\```
+
+Regras:
+
+- **Até 500KB por imagem** — o CI falha o PR se passar disso. Otimize antes
+  (squoosh.app ou similar) ou suba no R2.
+- **Galerias de eventos, PDFs, slides e vídeos**: não commitar. Esses vão para o
+  nosso bucket R2 em `https://assets.doug.knov.work` — fale com um maintainer
+  no PR que a gente sobe e te passa a URL para referenciar no markdown.
+- Imagens referenciadas com caminho relativo **precisam existir** no PR —
+  o CI valida isso automaticamente.

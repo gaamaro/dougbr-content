@@ -1,0 +1,9 @@
+{
+    "name": "dougbr-content",
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "js-yaml": "^4.1.0",
+        "zod": "^3.23.8"
+    }
+}

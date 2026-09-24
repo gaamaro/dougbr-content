@@ -125,8 +125,14 @@ location: "Online"
 format: "online"               # online | presencial | híbrido
 link: "https://..."            # meetup, sympla, linkedin...
 partner: "AWS UG Piracicaba"   # opcional
+flag: "apoio"                  # opcional — apoio | presenca (selo de destaque)
+cover: "https://..."           # opcional — logo do evento no R2
+gallery:                       # opcional — fotos pós-evento no R2
+  - "https://..."
 ---
 ```
+
+Lembrando: `flag` exibe um selo de destaque no card; `cover` é a logo principal do evento hospedada no R2; `gallery` são as fotos pós-evento, também no R2. Veja a seção de imagens abaixo.
 
 ### Vaga (`jobs/`)
 

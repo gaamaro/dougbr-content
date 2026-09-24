@@ -26,6 +26,9 @@ const schemas = {
         format: z.enum(['presencial', 'online', 'híbrido']).default('online'),
         link: z.string().url().optional(),
         partner: z.string().optional(),
+        flag: z.enum(['apoio', 'presenca']).optional(),
+        cover: z.string().url().optional(),
+        gallery: z.array(z.string().url()).default([]),
     }),
     jobs: z.object({
         title: z.string(),
